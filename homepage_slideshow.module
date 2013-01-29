@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * commented functions, etc remove the flash movie.
+ */
+
+include_once('homepage_slideshow.features.inc');
+
+
+/**
+ * Implementation of hook_init().
+ */
+function homepage_slideshow_init() {
+  drupal_add_css(drupal_get_path('module', 'homepage_slideshow') .'/theme/homepage-slideshow.css');
+  //drupal_add_js(drupal_get_path('module', 'homepage_slideshow') .'/theme/homepage_slideshow.js', 'module', 'footer');
+}
+
+
+/**
+ * Implementation of hook_block().
+ */
+/*function homepage_slideshow_block($op = 'list', $delta = '0') {
+  $block = array();
+  switch ($op) {
+    case 'list':
+      $block[0]['info'] = t('Home Page Flash Video');
+      $block[0]['visibility'] = 1;
+      $block[0]['pages'] = '<front>';
+      return $block;
+    case 'view':
+      switch ($delta) {
+        case 0:
+          $block['subject'] = t('');
+          $block['content'] = homepage_slideshow_block_contents();
+          break;
+      }
+      return $block;
+  }
+}*/
+
+/*function homepage_slideshow_block_contents() {
+  $flash_path = drupal_get_path('module', 'homepage_slideshow') .'/flash/';
+  $block_contents = '<iframe id="flash-iframe" src="' . $flash_path . 'flash.html" width=598 height=243 frameborder=0></iframe>';
+  return $block_contents;
+}*/
